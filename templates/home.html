@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block  title%}Home_page{% endblock  %}
+{% block  content%}
+<div class="image container-fluid d-flex">
+  <div class=" pt-3 me-2"><a href="{%url 'logout'%}"><button class="btn btn-outline-light btn-lg px-5 "type='submit'>LOGOUT</button></a></div>
+
+<div class="container">
+ {% for i in photos%}
+
+ <div class="card mt-5" style="width: 18rem; display: inline-block;">
+   <img src="{{i.image.url}}" class="card-img-top" alt="...">
+ </div>
+    {% endfor %}
+ </div>
+
+</div>
+{% endblock  %}
